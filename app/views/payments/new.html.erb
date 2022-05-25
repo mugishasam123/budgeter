@@ -1,0 +1,32 @@
+
+<section>
+
+  <nav class="navbar">
+    <div class="nav-head">
+      <%= link_to category_path(@category.id), :class => 'nav-icon' do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+      <h2>Transaction</h2>
+      <i class="fa fa-search"></i>
+    </div>
+  
+ 
+  
+  </nav>
+
+
+  <div class="container mx-auto flex justify-center">
+    <div class="p-6 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-2">
+      <h1 class="mb-8 text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Create a new Transaction</h1>
+      <%= form_with model: [@category,@payment], html: { class: 'flex flex-col gap-4 items-start' } do |f| %>
+        <%= f.hidden_field :author_id, value: current_user.id%>
+        <%= f.hidden_field :category_id, value: @category.id%>
+        <%= f.text_field :name, placeholder: 'food name', :required=> true %>
+        <%= f.number_field :amount, placeholder: ' amount', :required=> true %>
+       
+      
+        <%= f.submit "Save Transaction", class: 'bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded'%>
+      <% end %>
+    </div>
+  </div>
+</section>

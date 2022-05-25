@@ -1,0 +1,27 @@
+<section class="category-page">
+  <%= render 'layouts/navbar' %>
+    <% if notice %>
+      <p class="alert alert-success px-10 py-2 bg-green-300">
+        <%= notice %>
+      </p>
+      <% end %>
+        <% if alert %>
+          <p class="alert alert-danger px-10 py-2 bg-red-300">
+            <%= alert %>
+          </p>
+          <% end %>
+          <% if @categories.length !=0 %>
+            <div class="categories">
+              <% @categories.each do |category|%>
+
+                <%= render 'category' ,category:category%>
+
+                  <%end%>
+            </div>
+            <% else %>
+            <span class="text-center">No categories available</span>
+           <% end %>
+
+            <%= link_to 'Add category' ,new_category_path,class:"add-category"%>
+
+</section>
