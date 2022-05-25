@@ -1,15 +1,91 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7fad3;
+}
+
+.budgeter {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3678c2;
+  padding: 20px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 13px;
+  background-color: #3678c2;
+  color: white;
+}
+
+.nav-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.most-titles {
+  display: flex;
+  gap: 30px;
+  align-self: flex-end;
+}
+
+.category-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.add-category {
+  text-align: center;
+  background-color: #60b524;
+  color: white;
+}
+
+.categories {
+  background-color: #f5f6f8;
+  padding: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  gap: 5px;
+}
+
+.category-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-photo {
+  width: 80px;
+  height: 70px;
+}
+
+.total-payment {
+  text-align: right;
+  padding-right: 40px;
+}
