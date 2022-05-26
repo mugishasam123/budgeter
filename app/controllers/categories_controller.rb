@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    authorize! :read, @category
   end
 
   def new
