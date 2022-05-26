@@ -11,9 +11,9 @@
 - Ruby on Rails
 - PostgreSQL
 
-## Live Demo (if available)
+## Live Demo
 
- coming soon!
+- [live link](https://sleepy-tor-07024.herokuapp.com/)
 
 
 ## Getting Started
