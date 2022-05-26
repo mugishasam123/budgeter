@@ -1,0 +1,33 @@
+<section class="category-page">
+    <nav class="navbar">
+        <div class="nav-head">
+            <%= link_to categories_path, :class=> 'nav-icon' do %>
+                <i class="fa fa-arrow-left"></i>
+                <% end %>
+                    <h2>Transactions</h2>
+                    <i class="fa fa-search"></i>
+        </div>
+        <span class="total-payment">Total amount: $<%= @category.payments.sum(:amount) %></span>
+    </nav>
+
+    <% if notice %>
+    <p class="alert alert-success px-10 py-2 bg-green-300"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger px-10 py-2 bg-red-300"><%= alert %></p>
+  <% end %>
+
+  <% if @category.payments.length !=0 %>
+    <div class="categories">
+        <% @category.payments.each do |payment| %>
+            <%= render 'payment' ,payment:payment, category:@category %>
+                <% end %>
+    </div>
+    <% else %>
+    <span class="text-center">No Transactions available</span>
+   <% end %>
+
+
+    <%= link_to 'Add Transaction' ,new_category_payment_path(@category.id),class:"add-category"%>
+
+</section>

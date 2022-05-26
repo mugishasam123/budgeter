@@ -1,0 +1,29 @@
+<section>
+
+  <nav class="navbar">
+    <div class="nav-head">
+      <%= link_to categories_path, :class => 'nav-icon' do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+      <h2>Category</h2>
+      <i class="fa fa-search"></i>
+    </div>
+  </nav>
+
+
+  <div class="container mx-auto flex justify-center">
+    <div class="p-6 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-2">
+      <h1 class="mb-8 text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Create a new Category</h1>
+      <%= form_with model: @category, html: { class: 'flex flex-col gap-4 items-start' } do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id%>
+        <%= f.text_field :name, placeholder: 'Category name', :required => true %>
+        <%= f.text_field :icon, placeholder: 'Category icon', :required => true %>
+       
+      
+        <%= f.submit "Create Category", class: 'bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded'%>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
