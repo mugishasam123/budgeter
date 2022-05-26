@@ -10,6 +10,8 @@
 - Ruby
 - Ruby on Rails
 - PostgreSQL
+## Presentation
+- [video link](https://www.loom.com/share/c48231433bfe4c629c3702e150d30b80)
 
 ## Live Demo
 
