@@ -2,8 +2,20 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { :host => 'https://sleepy-tor-07024.herokuapp.com/' }
   # Code is not reloaded between requests.
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'https://sleepy-tor-07024.herokuapp.com/' }
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "samueldev400@gmail.com",
+      :password             => "0790026172",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+  }
+
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
